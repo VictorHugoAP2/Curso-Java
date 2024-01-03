@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import entities.enums.WorkerLevel;
 import model.HourContract;
 import model.Worker;
 
@@ -30,7 +31,19 @@ public class Menu {
         return contractsList;
     }
 
-    public void income(Worker worker){
+    public String readLevel(){
+        Integer levelOption = readInteger("Choose the Worker level: \n1)Junior 2)Mid Level 3)Senior");
+        String level = "";
+        switch(levelOption){
+            case 1: level = "JUNIOR"; break;
+            case 2: level = "MID_LEVEL"; break;
+            case 3: level = "SENIOR"; break;
+            default: System.out.println("an error has occurred");
+        }
+        return level;
+    }
+
+    public void showIncome(Worker worker){
         System.out.print("Enter month and year to calculate income:");
         Integer year = readInteger("Type the year (YYYY): ");
 		Integer month = readInteger("Type the month (m) or (mm): ");

@@ -19,9 +19,9 @@ public class Main {
         worker.setDepartment(new Department(menu.readString("Type the Department name: ")));
         System.out.println("Enter Worker data:");
         worker.setName(menu.readString("Name: "));
-        worker.setLevel(WorkerLevel.valueOf(menu.readString("Level: ")));
+        worker.setLevel(WorkerLevel.valueOf(menu.readLevel()));
         worker.setBaseSalary(menu.readDouble("Base salary: "));
         worker.setContracts(menu.readContracts());
-        menu.income(worker);
+        menu.showIncome(worker);
     }
 }
