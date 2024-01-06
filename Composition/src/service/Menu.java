@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import entities.enums.WorkerLevel;
 import model.HourContract;
 import model.Worker;
 
